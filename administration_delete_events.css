@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --green: #1f4a35;
+    --gold: #e8b923;
+    --bg: #ebf1ec;
+    --border: #d9e1da;
+    --text: #1b2a22;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    height: 52px;
+    background-color: var(--green);
+    border-bottom: 3px solid var(--gold);
+}
+
+.logo {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 46px;
+    width: 46px;
+}
+
+.nav_main ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav_main a {
+    display: inline-block;
+    padding: 14px 0 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.nav_main a:hover,
+.nav_main a.active {
+    border-bottom-color: var(--gold);
+}
+
+/* ---------- Main ---------- */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 55px 20px;
+}
+
+.page-title {
+    border-left: 5px solid var(--gold);
+    padding-left: 22px;
+    margin-bottom: 35px;
+}
+
+.page-title h1 {
+    font-size: 46px;
+    line-height: 1.1;
+}
+
+.page-title p {
+    margin-top: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: #4a5a50;
+}
+
+/* ---------- Events grid ---------- */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.event-card {
+    background-color: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 16px;
+}
+
+.event-card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.event-card h3 {
+    margin: 14px 16px 6px;
+    font-size: 20px;
+}
+
+.event-card p {
+    margin: 0 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4a5a50;
+}
+
+.empty {
+    grid-column: 1 / -1;
+    padding: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #8a968e;
+}
+
+/* ---------- Badge + Delete ---------- */
+.badge {
+    display: inline-block;
+    margin: 14px 16px 0;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.badge.current {
+    background-color: var(--green);
+}
+
+.badge.upcoming {
+    background-color: #b8860b;
+}
+
+.delete-btn {
+    display: block;
+    width: calc(100% - 32px);
+    margin: 16px 16px 0;
+    padding: 12px;
+    background-color: #c0392b;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #a52f23;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: var(--green);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    background-color: var(--green);
+    border-top: 3px solid var(--gold);
+    color: #fff;
+    text-align: center;
+    padding: 28px 0;
+}
+
+.site-footer h2 {
+    font-size: 17px;
+    font-weight: bold;
+}

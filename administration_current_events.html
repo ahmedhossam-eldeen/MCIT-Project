@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="administration_current_events.css">
+    <title>MCIT Add Current Event</title>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <img src="logo.svg" alt="Logo" class="logo">
+        <nav class="nav_main">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="upcoming_events.html">Upcoming Events</a></li>
+                <li><a href="administration.html" class="active">Administration</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-wrap">
+            <div class="page-title">
+                <h1>Add Current Event</h1>
+                <p>It will appear on Home and Events pages.</p>
+            </div>
+
+            <form id="eventForm" class="card">
+                <label for="name">Event Name</label>
+                <input type="text" id="name" placeholder="Enter event name" required>
+
+                <label for="caption">Event Caption</label>
+                <input type="text" id="caption" placeholder="Enter event caption" required>
+
+                <label for="image">Event Image</label>
+                <input type="file" id="image" accept="image/*" required>
+
+                <button type="submit" class="btn">Add Event</button>
+                <p id="msg"></p>
+            </form>
+
+            <a href="administration.html" class="back-link">← Back to dashboard</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <h2>All Rights Reserved, MCIT 2026</h2>
+    </footer>
+
+    <script src="events-store.js"></script>
+    <script src="administration_current_events.js"></script>
+</body>
+</html>
